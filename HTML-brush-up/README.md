@@ -1,5 +1,4 @@
-# Good vs. Bad Code
+Eksempel på en løsning: Animation
+=================================
 
-* Group exercise: discuss the problems in the code.
-* How would you define good HTML?
-* How would you define excellent CSS?
+Knap og kode, det første eksempel på et JavaScript.
