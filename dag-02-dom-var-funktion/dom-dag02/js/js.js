@@ -1,0 +1,1 @@
+document.getElementById("alea").innerHTML = Math.floor(Math.random() * 6) + 1;
