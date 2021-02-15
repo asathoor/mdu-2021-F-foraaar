@@ -4,6 +4,4 @@ Boilerplates til proframmering: foråret 2021.
 
 ## Første intro til markdown
 
-Nu sker der noget
-
-jadkjjfadjfkj
+Kodeeksempler fra undervisningen med fokus på JavaScript
