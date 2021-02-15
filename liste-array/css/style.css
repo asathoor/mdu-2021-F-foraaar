@@ -1,0 +1,11 @@
+/**
+ * file: style.css
+ * purpose: styles, animation etc
+ * further development: meyer reset perhaps?
+ **/
+img {
+    position: relative;
+    width: 200px;
+    height: auto;
+    float: left;
+}
