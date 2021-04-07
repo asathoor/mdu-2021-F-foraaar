@@ -36,21 +36,23 @@
 
     <script>
         /*
-@datasæt læses sådan:
+            @datasæt læses sådan:
 
-http://api.openweathermap.org/data/2.5/weather?
-q=Aarhus
-&lang=da
-&units=metric
-&appid=201d090c9cceacfc8931df89310ebfbb
+            http://api.openweathermap.org/data/2.5/weather?
+            q=Aarhus
+            &lang=da
+            &units=metric
+            &appid=201d090c9cceacfc8931df89310ebfbb
 
-*/
+        */
 
 // token from OpenWeatherMap
+
 const appId = 'ADD-YOUR-TOKEN-HERE';
 
+
 // get the weather JSON data via query URI
-fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=metric&appid=" + appId).then(
+fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=metric&appid=" + appId ).then(
     response => {
     return response.json(); // get weather data as JSON
 }).then(data => {
@@ -71,11 +73,24 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=met
         // tilføjer ("append") en div til vejroplysninger
         '<div class="weatherInfo">' +
 
+
+
         // tilføjer bynavn
         '<h1> ' + data.name + ' </h1>' +
+        '<h2> Luftfugtighed: ' + data.main.humidity + ' </h2>' +
+
+        // OPGAVE:
+        // SKRIV HVOR VARMT DET ER LIGE NU?
+        // VIA JSON
+        // ----
+        // hvor varmt er der lige nu i min by?
+        '<aside id="temperatur" class="enClass"> Temperatur: ' + data.main.temp + ' </aside>' +
 
         // tilføjer en beskrivelse af vejret lige nu
         '<h2>Vejr: ' + data.weather[0].description + '</h2>' +
+
+        '<h2>Pressure: ' + data.weather[0].main + '</h2>' +
+
 
         // tilføjer vejrsymbol
         '<figure>' +
@@ -87,9 +102,9 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=met
         '<p> Solnedgang: ' + sunsetTime + '</p>' +
 
         // afslutter #weatherInfo taggen
-        '</div>'; // 
+        '</div>'; //
 
-    // URL to the weather icons: https://openweathermap.org/weather-conditions 
+    // URL to the weather icons: https://openweathermap.org/weather-conditions
 
 }).catch(err => {
     // Do something with error here
